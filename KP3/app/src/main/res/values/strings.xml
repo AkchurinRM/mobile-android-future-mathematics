@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KP3</string>
+    <string name="app_in_name">Будущее Математики</string>
+    <string name="app_name_after">Для начала нужно войти</string>
+    <string name="under_reg_string">Зарегистрируйся, если ты тут впервые</string>
+    <string name="sign_string">Курсовой проект Акчурина Р.М.</string>
+    <string name="button_signin">Войти</string>
+    <string name="button_register">Зарегистрироваться</string>
+</resources>

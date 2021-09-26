@@ -1,0 +1,19 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/black"
+    tools:targetApi="O">
+
+    <item android:color="@android:color/black"/>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid  android:color="@color/sign_gold">
+            </solid>
+            <stroke android:color="@color/darker_gold" android:width="2dp">
+            </stroke>
+            <corners android:radius="2dp">
+            </corners>
+        </shape>
+    </item>
+
+</ripple>

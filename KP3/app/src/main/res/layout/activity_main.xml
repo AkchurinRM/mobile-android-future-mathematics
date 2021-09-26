@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_picture"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/artifika"
+            android:text="@string/app_in_name"
+            android:textAlignment="center"
+            android:textColor="@color/gold"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/artifika"
+            android:text="@string/app_name_after"
+            android:textAlignment="center"
+            android:textColor="@color/gold"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="left"
+        android:layout_below="@+id/main_name_layout"
+        android:layout_marginTop="155dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/thirty_action_name"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="left"
+        android:layout_below="@+id/main_name_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/one_action_name"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="left"
+        android:layout_below="@+id/main_name_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="200dp"
+        android:src="@drawable/five_action_name"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/main_name_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/two_action_name"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/text_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bad_script"
+        android:text="@string/sign_string"
+        android:textAlignment="center"
+        android:textColor="@color/sign_gold"
+        android:textSize="8sp"
+        tools:ignore="RelativeOverlap,SmallSp" />
+
+    <TextView
+        android:id="@+id/text_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/under_reg_string"
+        android:textAlignment="center"
+        android:textColor="@color/sign_gold"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:weightSum="3"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:id="@+id/sign_in_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_register"
+        android:layout_centerHorizontal="true">
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button_enter_guest"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="6dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="2"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="Войти как гость"
+            android:textColor="@color/gold"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sign_in_layout"
+        android:weightSum="2"
+        android:layout_margin="1dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_signin"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="@string/button_signin"
+            android:textColor="@color/gold"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/button_register"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawable="@drawable/button_register"
+            android:fontFamily="@font/artifika"
+            android:text="@string/button_register"
+            android:textColor="@color/gold"
+            android:textSize="15sp"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/button_google_signin"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:background="@drawable/google_auth_try"-->
+<!--            android:text=""/>-->
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/black"
+    tools:targetApi="O">
+
+    <item android:drawable="@drawable/google_action_name"/>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <stroke android:color="@color/gold" android:width="0.0000px"/>
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+</ripple>

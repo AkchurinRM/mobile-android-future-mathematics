@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_picture"
+    android:layout_height="match_parent"
+    tools:context=".ExercisesActivity">
+
+    <TextView
+        android:id="@+id/text_bottom_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bad_script"
+        android:text="@string/sign_string"
+        android:textAlignment="center"
+        android:textColor="@color/sign_gold"
+        android:textSize="8sp"
+        tools:ignore="RelativeOverlap,SmallSp" />
+
+    <LinearLayout
+        android:id="@+id/back_next_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_to_ex"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="{ Предыдущая тема"
+            android:textColor="@color/gold"
+            android:textAlignment="textStart"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/back_to_list_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="{ В меню }"
+            android:textAlignment="center"
+            android:textColor="@color/gold"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/next_to_list"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="Следующая тема }"
+            android:textColor="@color/gold"
+            android:textAlignment="textEnd"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_below="@+id/back_next_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="9px"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:background="@drawable/linearlayout_menu_border">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/exercise_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/artifika"
+            android:text="Упражнение"
+            android:textAlignment="center"
+            android:textColor="@color/gold"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/line2"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="9px"
+            android:background="@drawable/linearlayout_menu_border"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/exercise_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/artifika"
+            android:text="Текст упражнения"
+            android:textAlignment="center"
+            android:textColor="@color/gold"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/result_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/artifika"
+            android:text="Результат"
+            android:textAlignment="center"
+            android:textColor="@color/gold"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_below="@+id/info_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="9px"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:background="@drawable/linearlayout_menu_border">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/answer_and_result_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_layout"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/last_answer_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/artifika"
+            android:text="Последний ответ: "
+            android:textAlignment="textStart"
+            android:textColor="@color/gold"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/right_answer_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/artifika"
+            android:text="Очков заработано: 0\nОшибок совершено: 0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/gold"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/one_to_three_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_above="@+id/four_to_six_layout">
+
+
+        <Button
+            android:id="@+id/button_1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_border"
+            android:fontFamily="@font/artifika"
+            android:text="1"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button_2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="2"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button_3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="3"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/four_to_six_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_above="@+id/seven_to_nine_layout">
+
+
+        <Button
+            android:id="@+id/button_4"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="4"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button_5"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="5"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button_6"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="6"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/seven_to_nine_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_above="@+id/delete_n_zero_layout">
+
+
+        <Button
+            android:id="@+id/button_7"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="7"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button_8"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="8"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button_9"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="9"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delete_n_zero_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:id="@+id/delete_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="Удалить"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button_0"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="0"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        android:layout_above="@id/one_to_three_layout"
+        android:layout_centerInParent="true">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer_edittext"
+            android:hint="Твой ответ:"
+            android:inputType="text"
+            android:text=""
+            android:layout_weight="2"
+            android:textColor="@color/sign_gold"
+            android:textColorHint="@color/gold"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/artifika"
+            android:textAlignment="center"
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/button_answer"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:drawable="@drawable/button_signin"
+            android:fontFamily="@font/artifika"
+            android:text="Ответить"
+            android:layout_margin="5dp"
+            android:textColor="@color/gold"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_task"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/input_layout"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="4"
+        android:drawable="@drawable/button_signin"
+        android:fontFamily="@font/artifika"
+        android:text="Следующее задание }"
+        android:textAlignment="center"
+        android:textColor="@color/gold"
+        android:textSize="15sp" />
+
+</RelativeLayout>

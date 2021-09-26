@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_signin_layout"
+    android:background="@drawable/main_picture"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sign_gold"
+            android:text="Введите данные:"
+            android:textSize="20sp"
+            android:fontFamily="@font/artifika"
+            android:editable="false"
+            tools:ignore="Deprecated" />
+
+        <!--        mail-->
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_field_signin"
+            android:hint="Адрес почты (mail@gmail.com)"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:textColor="@color/sign_gold"
+            android:textColorHint="@color/darker_gold"
+            android:textSize="15sp"
+            app:met_floatingLabelText="Ваш адрес:"
+            app:met_floatingLabelTextColor="@color/darker_gold"
+            app:met_singleLineEllipsis="true"
+            app:met_hideUnderline="true"
+            android:fontFamily="@font/artifika"/>
+
+        <!--        &lt;!&ndash;&ndash;&gt; логин-->
+        <!--        <com.rengwuxian.materialedittext.MaterialEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:id="@+id/login_field_register"-->
+        <!--            android:hint="Логин"-->
+        <!--            android:inputType="text"-->
+        <!--            android:text=""-->
+        <!--            android:textColor="@color/sign_gold"-->
+        <!--            android:textColorHint="@color/darker_gold"-->
+        <!--            android:textSize="20sp"-->
+        <!--            app:met_floatingLabelText="Ваш логин:"-->
+        <!--            app:met_floatingLabelTextColor="@color/darker_gold"-->
+        <!--            app:met_singleLineEllipsis="true"-->
+        <!--            app:met_hideUnderline="true"-->
+        <!--            android:fontFamily="@font/artifika" />-->
+
+        <!--        pass-->
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pass_field_signin"
+            android:hint="Пароль:"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/sign_gold"
+            android:textColorHint="@android:color/background_light"
+            android:textSize="15sp"
+            app:met_floatingLabelText="Ваш пароль:"
+            app:met_floatingLabelTextColor="@android:color/background_light"
+            app:met_singleLineEllipsis="true"
+            app:met_hideUnderline="true"
+            app:passwordToggleEnabled="true"
+            app:met_minCharacters="6"
+            android:fontFamily="@font/artifika"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_picture"
+    android:layout_height="match_parent"
+    tools:context=".ListExcercisesActivity">
+
+    <TextView
+        android:id="@+id/text_bottom_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bad_script"
+        android:text="@string/sign_string"
+        android:textAlignment="center"
+        android:textColor="@color/sign_gold"
+        android:textSize="8sp"
+        tools:ignore="RelativeOverlap,SmallSp" />
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="16"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/logout_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:drawable="@drawable/button_signin"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/artifika"
+            android:text="Выйти"
+            android:textColor="@color/gold"
+            android:textSize="10sp"/>
+
+
+        <TextView
+            android:id="@+id/mail_text_view"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Гость"
+            android:layout_weight="14"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/artifika"
+            android:textColor="@color/yellow_gold"/>
+
+        <TextView
+            android:id="@+id/points_text_view"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Очки: 0"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/artifika"
+            android:textColor="@color/gold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_below="@+id/info_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_excercises"
+            android:hint="Введите тему для поиска"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/sign_gold"
+            android:textColorHint="@color/darker_gold"
+            android:textSize="15sp"
+            android:fontFamily="@font/artifika"/>
+
+        <ListView
+            android:divider="@color/darker_gold"
+            android:dividerHeight="1dip"
+            android:id="@+id/list_view_exercises"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
